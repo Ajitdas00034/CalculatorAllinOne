@@ -42,9 +42,16 @@ public class CalculatorType {
 		calculationChoiceSub3.setCalculationName(Operation.MULTIPLICATION);
 		calculationChoiceSub3.setCalculationType(CalculationOperationType.performOperation);
 
+		// Division calculation subtype
+		CalculationChoice calculationChoiceSub4 = new CalculationChoice();
+		calculationChoiceSub4.setCalculationIndicationNumber(3);
+		calculationChoiceSub4.setCalculationName(Operation.DIVISION);
+		calculationChoiceSub4.setCalculationType(CalculationOperationType.performOperation);
+
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub1);
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub2);
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub3);
+		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub4);
 
 		CalculationChoice calculationChoice = new CalculationChoice();
 		calculationChoice.setCalculationIndicationNumber(0);
