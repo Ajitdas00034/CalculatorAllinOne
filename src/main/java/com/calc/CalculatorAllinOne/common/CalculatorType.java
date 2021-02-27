@@ -47,11 +47,23 @@ public class CalculatorType {
 		calculationChoiceSub4.setCalculationIndicationNumber(3);
 		calculationChoiceSub4.setCalculationName(Operation.DIVISION);
 		calculationChoiceSub4.setCalculationType(CalculationOperationType.performOperation);
+		// Percentage calculation subtype
+		CalculationChoice calculationChoiceSub5 = new CalculationChoice();
+		calculationChoiceSub5.setCalculationIndicationNumber(4);
+		calculationChoiceSub5.setCalculationName(Operation.PERCENTAGE);
+		calculationChoiceSub5.setCalculationType(CalculationOperationType.performOperation);
+		// Multiplication calculation subtype
+		CalculationChoice calculationChoiceSub6 = new CalculationChoice();
+		calculationChoiceSub6.setCalculationIndicationNumber(5);
+		calculationChoiceSub6.setCalculationName(Operation.REMAINDER);
+		calculationChoiceSub6.setCalculationType(CalculationOperationType.performOperation);
 
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub1);
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub2);
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub3);
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub4);
+		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub5);
+		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub6);
 
 		CalculationChoice calculationChoice = new CalculationChoice();
 		calculationChoice.setCalculationIndicationNumber(0);
