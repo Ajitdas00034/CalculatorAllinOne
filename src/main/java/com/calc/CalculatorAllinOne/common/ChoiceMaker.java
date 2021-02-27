@@ -1,15 +1,16 @@
 package com.calc.CalculatorAllinOne.common;
 
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.calc.CalculatorAllinOne.dto.Choice;
 import com.calc.CalculatorAllinOne.model.CalculationChoice;
 
 public class ChoiceMaker {
 
-	public static String getChoice() {
+	public static Choice getChoice() {
+		Choice choice = new Choice();
 		Scanner sc = new Scanner(System.in);
 		Map<Integer, CalculationChoice> allCalculatorType = CalculatorType.getAllCalculatorType();
 
@@ -33,10 +34,18 @@ public class ChoiceMaker {
 			secondChoice = sc.nextInt();
 		}
 		if (secondChoice != null) {
-			return allCalculatorType.get(firstChoice).getCalculationSubChoice().get(secondChoice).getCalculationName();
+			choice.setChoiceName(allCalculatorType.get(firstChoice).getCalculationSubChoice().get(secondChoice)
+					.getCalculationName());
+			choice.setCalcType(allCalculatorType.get(firstChoice).getCalculationSubChoice().get(secondChoice)
+					.getCalculationType());
+
 		} else {
-			return allCalculatorType.get(firstChoice).getCalculationName();
+
+			choice.setChoiceName(allCalculatorType.get(firstChoice).getCalculationName());
+			choice.setCalcType(allCalculatorType.get(firstChoice).getCalculationType());
 		}
+
+		return choice;
 
 	}
 }

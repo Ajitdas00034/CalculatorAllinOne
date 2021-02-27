@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.calc.CalculatorAllinOne.constant.CalculationOperationType;
 import com.calc.CalculatorAllinOne.constant.Operation;
 import com.calc.CalculatorAllinOne.model.CalculationChoice;
 
@@ -27,20 +28,23 @@ public class CalculatorType {
 		CalculationChoice calculationChoiceSub1 = new CalculationChoice();
 		calculationChoiceSub1.setCalculationIndicationNumber(0);
 		calculationChoiceSub1.setCalculationName(Operation.ADDITION);
+		calculationChoiceSub1.setCalculationType(CalculationOperationType.performOperation);
 
 		// Substraction calculation subtype
 		CalculationChoice calculationChoiceSub2 = new CalculationChoice();
 		calculationChoiceSub2.setCalculationIndicationNumber(1);
 		calculationChoiceSub2.setCalculationName(Operation.SUBSTRACTION);
+		calculationChoiceSub2.setCalculationType(CalculationOperationType.performOperation);
 
 		// Multiplication calculation subtype
 		CalculationChoice calculationChoiceSub3 = new CalculationChoice();
 		calculationChoiceSub3.setCalculationIndicationNumber(2);
 		calculationChoiceSub3.setCalculationName(Operation.MULTIPLICATION);
+		calculationChoiceSub3.setCalculationType(CalculationOperationType.performOperation);
 
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub1);
 		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub2);
-		// calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub3);
+		calculationChoiceListOfBasicMathematicalOperation.add(calculationChoiceSub3);
 
 		CalculationChoice calculationChoice = new CalculationChoice();
 		calculationChoice.setCalculationIndicationNumber(0);
