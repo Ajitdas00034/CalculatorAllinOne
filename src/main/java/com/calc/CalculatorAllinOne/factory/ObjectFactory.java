@@ -2,7 +2,9 @@ package com.calc.CalculatorAllinOne.factory;
 
 import com.calc.CalculatorAllinOne.service.Calculator;
 import com.calc.CalculatorAllinOne.service.impl.Addition;
+import com.calc.CalculatorAllinOne.service.impl.AreaTransformer;
 import com.calc.CalculatorAllinOne.service.impl.Division;
+import com.calc.CalculatorAllinOne.service.impl.LengthTransformer;
 import com.calc.CalculatorAllinOne.service.impl.Multiplication;
 import com.calc.CalculatorAllinOne.service.impl.Percentage;
 import com.calc.CalculatorAllinOne.service.impl.Remainder;
@@ -17,6 +19,8 @@ public class ObjectFactory {
 		Division division = new Division();
 		Percentage percentage = new Percentage();
 		Remainder remainder = new Remainder();
+		LengthTransformer lengthTransformer = new LengthTransformer();
+		AreaTransformer areaTransformer = new AreaTransformer();
 
 		switch (choiceName) {
 		case "ADDITION":
@@ -36,6 +40,12 @@ public class ObjectFactory {
 
 		case "REMAINDER":
 			return remainder;
+
+		case "LENGTH_OPERATION":
+			return lengthTransformer;
+
+		case "AREA_OPERATION":
+			return areaTransformer;
 
 		default:
 			return null;
