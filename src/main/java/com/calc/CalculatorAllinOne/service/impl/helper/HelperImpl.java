@@ -18,7 +18,12 @@ public class HelperImpl implements Helper {
 		else if(c.getChoiceName().contentEquals(Operation.VOLUME_OPERATION)) {
 			VolumeInputHelper.showHelpUnits();
 		}
+		else if(c.getChoiceName().contentEquals(Operation.SPEED_OPERATION)) {
+			SpeedUnitHelper.showHelpUnits();
+		}
+			
+		}
 
 	}
 
-}
+

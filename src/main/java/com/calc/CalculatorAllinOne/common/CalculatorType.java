@@ -18,11 +18,14 @@ public class CalculatorType {
 		CalculationChoice lengthOperationInputs = getLengthOperationInputHelper();
 		CalculationChoice areaOperationInputs = getAreaOperationInputHelper();
 		CalculationChoice VolumeOperationInputs = getVolumeOperationInputs();
+		CalculationChoice SpeedOperationInputs = getSpeedOperationInputs();
 
 		allCalculatorTypes.put(0, basicMathematicalOperationInputs);
 		allCalculatorTypes.put(1, lengthOperationInputs);
 		allCalculatorTypes.put(2, areaOperationInputs);
 		allCalculatorTypes.put(3, VolumeOperationInputs);
+		allCalculatorTypes.put(4, SpeedOperationInputs);
+
 		return allCalculatorTypes;
 	}
 
@@ -101,8 +104,13 @@ public class CalculatorType {
 		CalculationChoice calculationChoice = new CalculationChoice();
 		calculationChoice.setCalculationName(Operation.VOLUME_OPERATION);
 		calculationChoice.setCalculationIndicationNumber(3);
-
 		return calculationChoice;
+	}
 
-}
+	private static CalculationChoice getSpeedOperationInputs() {
+		CalculationChoice calculationChoice = new CalculationChoice();
+		calculationChoice.setCalculationName(Operation.SPEED_OPERATION);
+		calculationChoice.setCalculationIndicationNumber(4);
+		return calculationChoice;
+	}
 }

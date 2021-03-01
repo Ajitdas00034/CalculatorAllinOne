@@ -1,23 +1,21 @@
 package com.calc.CalculatorAllinOne.service.impl;
 
-import com.calc.CalculatorAllinOne.constant.LengthUnit;
+import com.calc.CalculatorAllinOne.constant.SpeedUnit;
 import com.calc.CalculatorAllinOne.service.Calculator;
 
-public class LengthTransformer implements Calculator {
+public class SpeedTransformer implements Calculator {
 
 	@Override
 	public double calculate(String fromParam, String toParam, double value) {
-		LengthUnit fromParamUnit = null;
-		LengthUnit toParamUnit = null;
-
-		try {
-			fromParamUnit = LengthUnit.valueOf(fromParam);
-			toParamUnit = LengthUnit.valueOf(toParam);
-		} catch (IllegalArgumentException ex) {
+		SpeedUnit formParamUnit=null;
+		SpeedUnit toParamUnit=null;
+		try{
+			formParamUnit=SpeedUnit.valueOf(fromParam);
+			toParamUnit=SpeedUnit.valueOf(toParam);			
+		}catch(IllegalArgumentException ex) {
 			System.out.println("Oops !!Please take input only above mentioned units . Code Broke !! ");
 		}
-
-		System.out.println(fromParamUnit + " " + toParamUnit + " " + value);
+		System.out.println(formParamUnit + " " + toParamUnit + " " + value);
 		return 0;
 	}
 
