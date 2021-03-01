@@ -15,6 +15,9 @@ public class HelperImpl implements Helper {
 		else if(c.getChoiceName().contentEquals(Operation.AREA_OPERATION)){
 			AreUnitHelper.showHelpUnits();
 		}
+		else if(c.getChoiceName().contentEquals(Operation.VOLUME_OPERATION)) {
+			VolumeInputHelper.showHelpUnits();
+		}
 
 	}
 

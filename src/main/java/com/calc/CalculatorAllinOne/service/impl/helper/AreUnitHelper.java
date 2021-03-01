@@ -8,7 +8,7 @@ public class AreUnitHelper {
 
 	public static void showHelpUnits() {
 		System.out.println("Enter from and to type from this below values");
-		for(AreaUnit areaUnit:AreaUnit.values()) {
+		for (AreaUnit areaUnit : AreaUnit.values()) {
 			System.out.println(areaUnit);
 		}
 

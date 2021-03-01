@@ -9,6 +9,7 @@ import com.calc.CalculatorAllinOne.service.impl.Multiplication;
 import com.calc.CalculatorAllinOne.service.impl.Percentage;
 import com.calc.CalculatorAllinOne.service.impl.Remainder;
 import com.calc.CalculatorAllinOne.service.impl.Substraction;
+import com.calc.CalculatorAllinOne.service.impl.VoumeTransformer;
 
 public class ObjectFactory {
 
@@ -21,6 +22,7 @@ public class ObjectFactory {
 		Remainder remainder = new Remainder();
 		LengthTransformer lengthTransformer = new LengthTransformer();
 		AreaTransformer areaTransformer = new AreaTransformer();
+		VoumeTransformer voumeTransformer=new VoumeTransformer();
 
 		switch (choiceName) {
 		case "ADDITION":
@@ -46,6 +48,9 @@ public class ObjectFactory {
 
 		case "AREA_OPERATION":
 			return areaTransformer;
+			
+		case"VOLUME_OPERATION":
+			return voumeTransformer;
 
 		default:
 			return null;

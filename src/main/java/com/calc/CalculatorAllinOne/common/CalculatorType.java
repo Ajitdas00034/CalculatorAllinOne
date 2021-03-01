@@ -17,10 +17,12 @@ public class CalculatorType {
 		CalculationChoice basicMathematicalOperationInputs = getBasicMathematicalOperationInputHelper();
 		CalculationChoice lengthOperationInputs = getLengthOperationInputHelper();
 		CalculationChoice areaOperationInputs = getAreaOperationInputHelper();
+		CalculationChoice VolumeOperationInputs = getVolumeOperationInputs();
 
 		allCalculatorTypes.put(0, basicMathematicalOperationInputs);
 		allCalculatorTypes.put(1, lengthOperationInputs);
 		allCalculatorTypes.put(2, areaOperationInputs);
+		allCalculatorTypes.put(3, VolumeOperationInputs);
 		return allCalculatorTypes;
 	}
 
@@ -95,4 +97,12 @@ public class CalculatorType {
 		return calculationChoice;
 	}
 
+	private static CalculationChoice getVolumeOperationInputs() {
+		CalculationChoice calculationChoice = new CalculationChoice();
+		calculationChoice.setCalculationName(Operation.VOLUME_OPERATION);
+		calculationChoice.setCalculationIndicationNumber(3);
+
+		return calculationChoice;
+
+}
 }

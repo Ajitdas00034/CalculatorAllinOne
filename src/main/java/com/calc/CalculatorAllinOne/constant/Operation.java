@@ -16,5 +16,6 @@ public class Operation {
 	
 	
     public static String AREA_OPERATION="AREA_OPERATION";
+    public static String VOLUME_OPERATION="VOLUME_OPERATION";
 
 }
