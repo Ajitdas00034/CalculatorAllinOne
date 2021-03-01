@@ -10,18 +10,26 @@ import com.calc.CalculatorAllinOne.constant.Operation;
 import com.calc.CalculatorAllinOne.model.CalculationChoice;
 
 public class CalculatorType {
+
 	private static Map<Integer, CalculationChoice> allCalculatorTypes = new HashMap<Integer, CalculationChoice>();
 
 	public static Map<Integer, CalculationChoice> getAllCalculatorType() {
-		CalculationChoice basicMathematicalOperationInputs = getBasicMathematicalOperationInputs();
-		CalculationChoice lengthOperationInputs = getLengthOperationInputs();
+		CalculationChoice basicMathematicalOperationInputs = getBasicMathematicalOperationInputHelper();
+		CalculationChoice lengthOperationInputs = getLengthOperationInputHelper();
+		CalculationChoice areaOperationInputs = getAreaOperationInputHelper();
+		CalculationChoice VolumeOperationInputs = getVolumeOperationInputs();
+		CalculationChoice SpeedOperationInputs = getSpeedOperationInputs();
 
 		allCalculatorTypes.put(0, basicMathematicalOperationInputs);
 		allCalculatorTypes.put(1, lengthOperationInputs);
+		allCalculatorTypes.put(2, areaOperationInputs);
+		allCalculatorTypes.put(3, VolumeOperationInputs);
+		allCalculatorTypes.put(4, SpeedOperationInputs);
+
 		return allCalculatorTypes;
 	}
 
-	private static CalculationChoice getBasicMathematicalOperationInputs() {
+	private static CalculationChoice getBasicMathematicalOperationInputHelper() {
 
 		List<CalculationChoice> calculationChoiceListOfBasicMathematicalOperation = new ArrayList<CalculationChoice>();
 		// Addition calculation subtype
@@ -74,7 +82,7 @@ public class CalculatorType {
 
 	}
 
-	private static CalculationChoice getLengthOperationInputs() {
+	private static CalculationChoice getLengthOperationInputHelper() {
 
 		CalculationChoice calculationChoice = new CalculationChoice();
 		calculationChoice.setCalculationName(Operation.LENGTH_OPERATION);
@@ -84,4 +92,25 @@ public class CalculatorType {
 
 	}
 
+	private static CalculationChoice getAreaOperationInputHelper() {
+		CalculationChoice calculationChoice = new CalculationChoice();
+		calculationChoice.setCalculationName(Operation.AREA_OPERATION);
+		calculationChoice.setCalculationIndicationNumber(2);
+
+		return calculationChoice;
+	}
+
+	private static CalculationChoice getVolumeOperationInputs() {
+		CalculationChoice calculationChoice = new CalculationChoice();
+		calculationChoice.setCalculationName(Operation.VOLUME_OPERATION);
+		calculationChoice.setCalculationIndicationNumber(3);
+		return calculationChoice;
+	}
+
+	private static CalculationChoice getSpeedOperationInputs() {
+		CalculationChoice calculationChoice = new CalculationChoice();
+		calculationChoice.setCalculationName(Operation.SPEED_OPERATION);
+		calculationChoice.setCalculationIndicationNumber(4);
+		return calculationChoice;
+	}
 }

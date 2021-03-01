@@ -12,6 +12,11 @@ public class Operation {
 	public static String REMAINDER = "REMAINDER";
 	
 
-	public static String LENGTH_OPERATION = "Length Operation";
+	public static String LENGTH_OPERATION = "LENGTH_OPERATION";
+	
+	
+    public static String AREA_OPERATION="AREA_OPERATION";
+    public static String VOLUME_OPERATION="VOLUME_OPERATION";
+    public static String SPEED_OPERATION="SPEED_OPERATION";
 
 }
